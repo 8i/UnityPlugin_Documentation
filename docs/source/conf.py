@@ -51,8 +51,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'8iUnityPlugin'
-copyright = u'2016, Tom Campbell'
-author = u'Tom Campbell'
+copyright = u'2016, 8i'
+author = u'8i'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -262,7 +262,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, '8iUnityPlugin.tex', u'8iUnityPlugin Documentation',
-     u'Tom Campbell', 'manual'),
+     u'8i', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
