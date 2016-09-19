@@ -22,17 +22,3 @@ Contents:
 
 .. toctree::
    :maxdepth: 1
-
-   installation
-   quickStart
-   ObjectsAndComponents/index
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
