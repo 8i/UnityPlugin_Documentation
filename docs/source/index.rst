@@ -24,8 +24,8 @@ Contents:
    :maxdepth: 1
 
    Installation
-   QuickStart
-   UsefulComponents
+   Quick Start
+   Useful Components
    Objects And Components/index
    Platform Support/index
    Third Party Support/index
