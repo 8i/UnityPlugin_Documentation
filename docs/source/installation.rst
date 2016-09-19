@@ -1,12 +1,12 @@
-..  -*- coding: utf-8 -*-
-
-Downloads
+Installation
 =========
 
+Download
+--------------------------
 All the files you need to access, including the plugin, example content and documentation can be found in the dropbox folder that was shared with you.
 
-What is the 8i Plugin?
-----------------------
+Adding the 8i Unity Plugin
+--------------------------
 
 1. Ensure you have Unity 5.2.3 or greater installed
 2. Create a new Unity Project

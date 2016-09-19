@@ -1,7 +1,5 @@
-..  -*- coding: utf-8 -*-
-
-Welcome
-========
+8i Unity Plugin documentation
+=============================
 
 Welcome to the 8i Unity Alpha programme!
 
@@ -18,3 +16,22 @@ Why are we doing it?
 --------------------
 
 To introduce developers to our technology, its possibilities and constraints To gather feedback from you To build an 8i community of early adopters, developers, content creators and VR enthusiasts
+
+
+Contents:
+
+.. toctree::
+   :maxdepth: 1
+
+   installation
+
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
