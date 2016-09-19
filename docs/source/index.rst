@@ -7,7 +7,7 @@ We’re looking forward to finding out how you use our custom plugin and getting
 
 
 What is the 8i Plugin?
-------------------
+----------------------
 
 The 8i Unity Plugin allows developers to add 8i’s fully volumetric video to any Unity experience. It’s like embedding traditional 2D video content, except you get to walk around ours as it plays!
 
@@ -24,7 +24,8 @@ Contents:
    :maxdepth: 1
 
    installation
-
+   quickStart
+   ObjectsAndComponents/index
 
 
 
