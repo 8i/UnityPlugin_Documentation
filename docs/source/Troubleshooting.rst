@@ -4,6 +4,7 @@ Troubleshooting
 HVR Actors are not rendering
 ----------------------------
 **The Graphics API may not be supported**
+
 Windows
 	The Graphics API may not be supported Go to ‘Edit/Project Settings/Player’ and make sure that the PlayerSettings ‘Graphics API for Windows’ is set to either DirectX11 or OpenGL2. These are the only supported graphics APIs at this time.
 
