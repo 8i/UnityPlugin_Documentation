@@ -12,6 +12,7 @@ For an introduction to Cinema Director, tutorial videos can be found here.
 Extract the ‘CinemaDirector’ folder from the zip into your project located under '8i/Integrations'
 
 **Usage**
+
 1. Open the ‘Creator’ window for Cinema Director by going to ‘Window/Cinema Suite/Cinema Director/Create Cutscene’
 2. Set the Actor Track Groups to ‘1’
 3. Drag the GameObject that has a HvrActor component attached into the ‘Actor 1’ slot
