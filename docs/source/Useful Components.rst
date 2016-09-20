@@ -19,7 +19,7 @@ Can be used in conjunction with a Projector component to project a texture onto 
 HvrActorAudioSourceSync
 -----------------------
 
-Attaching a AudioSource and HvrActor to this component will automatically cause the AudioSource’s playback to match the HvrActor.
+This component has two slots, one for an AudioSource and one for an HvrActor. Filling both these slots will cause the AudioSource's playback to match the HvrActor.
 
 Create by
 
