@@ -21,3 +21,16 @@ Extract the ‘CinemaDirector’ folder from the zip into your project located u
 6. In the Director window click the ‘+’ icon next to ‘Actor 1 Group’ and add a ‘Actor Track’
 7. Click the ‘+’ button next to the ‘Actor Track’ and select ‘8i/Play Hvr’
 8. Click the play symbol in the Director window to preview the cutscene.
+
+
+**How to use HVR Actor Fade**
+
+1. Open the ‘Creator’ window for Cinema Director by going to ‘Window/Cinema Suite/Cinema Director/Create Cutscene’
+2. Set the Actor Track Groups to ‘1’
+3. Drag the GameObject that has a HvrActor component attached into the ‘Actor 1’ slot
+4. Press ‘Create Cutscene’
+5. If it is not visible already, open the Director window by going to ‘Window/Cinema Suite/Cinema Director/Director’
+6. In the Director window click the ‘+’ icon next to ‘Actor 1 Group’ and add a ‘Actor Track’
+7. Click the ‘+’ button next to the ‘Actor Track’ and select ‘8i/HVR Actor Fade’
+8. In the hierarchy click the "Cutscene/HvrActorGroup/ActorTack/HVRActorFade" and you could moldify the start color/end color/firsttime/duration.
+9. If you wish to do the alpha fade, please make sure "Rendering Mode" of your HVR Actor shader is set to "AlphaBlend"
