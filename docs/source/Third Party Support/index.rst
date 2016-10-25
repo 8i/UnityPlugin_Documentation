@@ -8,4 +8,5 @@ Contents:
 
    VR Support
    Cinema Director
+   Node Canvas
    Slate Cinematic Director
