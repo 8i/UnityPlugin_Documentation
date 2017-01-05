@@ -21,17 +21,17 @@ To introduce developers to our technology, its possibilities and constraints To 
 Supported Unity Versions and Platforms
 --------------------------
 **Unity Versions**
-- Unity 5.4.x
-- Unity 5.5.x 
+  - Unity 5.4.x
+  - Unity 5.5.x 
 
 **Unity Editor Platforms**
-- Windows x64
-- Linux x64
+  - Windows x64
+  - Linux x64
 
 **Build Targets**
-- Windows x64
-- Linux x64
-- Android
+  - Windows x64
+  - Linux x64
+  - Android
 
 Contents:
 
