@@ -18,6 +18,21 @@ Why are we doing it?
 To introduce developers to our technology, its possibilities and constraints To gather feedback from you To build an 8i community of early adopters, developers, content creators and VR enthusiasts
 
 
+Supported Unity Versions and Platforms
+--------------------------
+**Unity Versions**
+- Unity 5.4.x
+- Unity 5.5.x 
+
+**Unity Editor Platforms**
+- Windows x64
+- Linux x64
+
+**Build Targets**
+- Windows x64
+- Linux x64
+- Android
+
 Contents:
 
 .. toctree::
