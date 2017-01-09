@@ -11,6 +11,13 @@ Windows
 Android
 	The Graphics API may not be supported. Make sure that under the PlayerSettings that the targeting GraphicsAPI is GLES3 and that your device supports GLES3. Under the PlayerSettings ‘Split Application Binary’ may be enabled. There is a known issue that on some devices, that when the ‘Split Application Binary’ option is enabled the HvrRender the shaders may not load correctly from the resources. Go to ‘Edit/Project Settings/Player’ and make sure that the option ‘Split Application Binary’ is not checked.
 
+Android - DayDream
+	The current release of the Unity Editor for DayDream ( 5.4.2f2-GVR13 ), will not use the AndroidManifest.xml file that we provide within the plugin. This means the hvr frames will not be extracted or read from the devices storage upon installing the build.
+	It appears as though this build of the Unity Editor has a bug where it will not use and AndroidManifest.xml file that is not located at this specific location `project_name/Assets/Plugins/Android/AndroidManifest.xml`
+
+	Until this is fixed within Unity, we recommend copying the AndroidManifest file from this location `8i/core/platform support/android/plugins/AndroidManifest.xml` to `project_name/Assets/Plugins/Android/AndroidManifest.xml`
+
+
 Rendering Issues when using VR
 ------------------------------
 
