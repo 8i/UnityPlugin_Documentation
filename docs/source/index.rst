@@ -11,11 +11,11 @@ What is the 8i Plugin?
 
 The 8i Unity Plugin allows developers to add 8i’s fully volumetric video to any Unity experience. It’s like embedding traditional 2D video content, except you get to walk around ours as it plays!
 
-  
+
 Why are we doing it?
 --------------------
 
-To introduce developers to our technology, its possibilities and constraints To gather feedback from you To build an 8i community of early adopters, developers, content creators and VR enthusiasts
+To introduce developers to our technology, its possibilities and constraints to gather feedback from you to build an 8i community of early adopters, developers, content creators and VR enthusiasts
 
 
 Supported Unity Versions and Platforms
