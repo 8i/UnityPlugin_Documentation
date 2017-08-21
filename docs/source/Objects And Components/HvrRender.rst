@@ -5,8 +5,6 @@ In order to render HvrActors a HvrRender component must be attached to a Camera.
 
 There are three different render modes that the HvrRender component can be set to. While Standard is the default and recommended mode, there are two others which each have different properties and performance costs.
 
-Performance information can be viewed on the component and will show the cost of rendering the current view in milliseconds. Lower is better. Keep in mind that render performance is closely tied to the number of actors in the scene, the level of detail in the actors and the rendering resolution.
-
 How to Create
 -------------
 1. Select the main rendering camera in the scene
