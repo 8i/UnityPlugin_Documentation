@@ -45,5 +45,6 @@ Contents:
    Useful Components
    Platform Support/index
    Third Party Support/index
+   Test-Markdown
    Troubleshooting
    Support
