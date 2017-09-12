@@ -19,6 +19,10 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import guzzle_sphinx_theme
+import recommonmark
+from recommonmark.transform import AutoStructify
+
 
 # -- General configuration ------------------------------------------------
 
@@ -32,6 +36,7 @@
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    "guzzle_sphinx_theme",
 ]
 
 # Auto create a toctree.
@@ -129,16 +134,23 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+# html_theme = 'alabaster'
+html_theme = 'guzzle_sphinx_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+# Guzzle theme options (see theme.conf for more information)
+html_theme_options = {
+    # Set the name of the project to appear in the sidebar
+    "project_nav_name": "Unity Plugin Documentation",
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
@@ -351,3 +363,15 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+# AutoStructify features.
+# Provided by recommonmark http://recommonmark.readthedocs.io/en/latest/index.html
+# See the potential at http://recommonmark.readthedocs.io/en/latest/auto_structify.html
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'url_resolver': lambda url: 'https://github.com/8i/UnityPlugin_Documentation/' + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_auto_toc_tree': True,
+        'enable_auto_doc_ref': True,
+    }, True)
+    app.add_transform(AutoStructify)
