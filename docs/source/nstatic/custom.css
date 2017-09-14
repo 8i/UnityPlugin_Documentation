@@ -36,3 +36,11 @@ table th,
 table td {
   padding: 8px;
 }
+
+.footer.portal {
+  /* Override the sphinx theme guzzle. */
+  text-align: left;
+  margin-left: 300px;
+  max-width: 100%;
+  width: initial;
+}
