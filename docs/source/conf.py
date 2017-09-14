@@ -164,7 +164,7 @@ html_theme_path = guzzle_sphinx_theme.html_theme_path()
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-# html_logo = None
+html_logo = 'nstatic/unity.png'
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -200,7 +200,12 @@ html_static_path = [
 #
 # html_sidebars = {}
 html_sidebars = {
-    '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'],
+    '**': [
+        'logo-text.html',
+        'globaltoc.html',
+        'relations.html',
+        'searchbox.html'
+    ],
 }
 
 # Additional templates that should be rendered to pages, maps page names to
@@ -375,3 +380,7 @@ def setup(app):
         'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
+
+    app.add_stylesheet('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
+    app.add_stylesheet('/static/css/8icommon.css')
+    app.add_stylesheet('custom.css')
