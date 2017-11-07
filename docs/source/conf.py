@@ -153,12 +153,15 @@ html_theme_options = {
 
 # TODO needs to load the config from
 settings_module = os.environ.get('DJANGO_SETTINGS_MODULE', "eighti.settings.dev")
+env = os.environ.get('ENVIRONMENT')
+if env == 'staging':
+    settings_module = "eighti.settings.staging"
+if env == 'production':
+    settings_module = "eighti.settings.production"
 
 sys.path.append(os.path.abspath('../../../eighti'))
 
 config = importlib.import_module(settings_module)
-
-print config
 
 html_context = {
     "config": {
