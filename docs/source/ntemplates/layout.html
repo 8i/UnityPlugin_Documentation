@@ -1,84 +1,9 @@
 {% extends '!layout.html' %}
 
 {%- block header %}
-  <div class="portal light">
-    <div class="header">
-      <a href='/'>
-        <div class="logo">
-          <img src="/static/img/8i-logo.png">
-        </div>
-        <span class="devs">
-          Developers
-        </span>
-      </a>
-      <div class="links">
-        <!-- TODO support drop down for platforms. -->
-        <div href='/unity/' class="link">
-          Platforms <i class="fa fa-caret-down" aria-hidden="true"></i>
-          <div class="dropdown">
-            <a href='/unity/'>
-              <div class="item">
-                <img src="/static/img/icons/unity.png" />
-                <span class="name">Unity</span>
-              </div>
-            </a>
-            <a href='/unreal/'>
-              <div class="item">
-                <img src="/static/img/icons/unreal.png" />
-                <span class="name">Unreal</span>
-              </div>
-            </a>
-            <a href='/android/'>
-              <div class="item">
-                <i class="fa fa-android" aria-hidden="true"></i>
-                <span class="name">Android</span>
-              </div>
-            </a>
-            <a href='/ios/'>
-              <div class="item">
-                <i class="fa fa-apple" aria-hidden="true"></i>
-                <span class="name">Apple</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="link active">
-          Documentation <i class="fa fa-caret-down" aria-hidden="true"></i>
-          <div class="dropdown">
-            <a href='/docs/index.html'>
-              <div class="item">
-                <img src="/static/img/icons/unity.png" />
-                <span class="name">Unity</span>
-              </div>
-            </a>
-            <a href='/docs2/index.html'>
-              <div class="item">
-                <img src="/static/img/icons/unreal.png" />
-                <span class="name">Unreal</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <a href='/showcase/' class="link">
-          Showcase
-        </a>
-        <a href='/support/' class="link">
-          Community
-        </a>
-        <a href='/download/' class="link">
-          <div class="button blue">
-            Sample assets
-          </div>
-        </a>
-      </div>
-      <div class="search">
-        <!-- TODO some search download thing? -->
-      </div>
-    </div>
-  </div>
-  <div style="height: 100px">
 
-  </div>
+  {% include "portal/includes/header.html" %}
+
 {%- endblock %}
 
 {%- block footer %}

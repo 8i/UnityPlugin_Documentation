@@ -20,7 +20,10 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import guzzle_sphinx_theme
+import importlib
+import os
 import recommonmark
+import sys
 from recommonmark.transform import AutoStructify
 
 
@@ -44,7 +47,7 @@ autodoc_default_flags = ['members']
 autosummary_gerenerate = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['ntemplates']
+templates_path = ['ntemplates', '../../../eighti/home/templates/', '../../../eighti/portal/templates/']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -146,6 +149,29 @@ html_theme = 'guzzle_sphinx_theme'
 html_theme_options = {
     # Set the name of the project to appear in the sidebar
     "project_nav_name": "Unity Plugin Documentation",
+}
+
+# TODO needs to load the config from
+settings_module = os.environ.get('DJANGO_SETTINGS_MODULE', "eighti.settings.dev")
+
+sys.path.append(os.path.abspath('../../../eighti'))
+
+config = importlib.import_module(settings_module)
+
+print config
+
+html_context = {
+    "config": {
+        'DEV_PORTAL_URL': config.DEV_PORTAL_URL,
+        'EIGHTI_URL': config.EIGHTI_URL,
+    },
+    # We need this to appear similar to a wagtail context.
+    'page': {
+        'platform': {
+            'nav_item_name': 'Unity',
+            'documentation_link': '?',
+        }
+    }
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
