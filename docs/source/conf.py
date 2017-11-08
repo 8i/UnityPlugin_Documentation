@@ -416,4 +416,4 @@ def setup(app):
     app.add_stylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     app.add_stylesheet('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
     app.add_stylesheet('/static/css/8icommon.css')
-    app.add_stylesheet('custom.css')
+    app.add_stylesheet('/static/css/8idocumentation.css')
