@@ -168,8 +168,8 @@ config = importlib.import_module(settings_module)
 
 html_context = {
     "config": {
-        'DEV_PORTAL_URL': config.DEV_PORTAL_URL,
-        'EIGHTI_URL': config.EIGHTI_URL,
+        'DEV_PORTAL_URL': '/developers/',
+        'EIGHTI_URL': '/',
     },
     # We need this to appear similar to a wagtail context.
     'page': {
