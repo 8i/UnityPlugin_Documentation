@@ -151,13 +151,16 @@ html_theme_options = {
     "project_nav_name": "Unity Plugin Documentation",
 }
 
-# TODO needs to load the config from
-settings_module = os.environ.get('DJANGO_SETTINGS_MODULE', "eighti.settings.dev")
+# Default to production for now so at least it will always work in production.
+# TODO need to figure out why this isn't picking up the ENVIRONMENT variable?
+settings_module = os.environ.get('DJANGO_SETTINGS_MODULE', "eighti.settings.production")
 env = os.environ.get('ENVIRONMENT')
 if env == 'staging':
     settings_module = "eighti.settings.staging"
 if env == 'production':
     settings_module = "eighti.settings.production"
+if env == 'dev':
+    settings_module = "eighti.settings.dev"
 
 sys.path.append(os.path.abspath('../../../eighti'))
 
