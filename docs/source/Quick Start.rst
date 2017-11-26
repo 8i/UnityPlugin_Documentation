@@ -17,9 +17,12 @@ Create
     8. At the bottom of the inspector click 'Add Component' and search for "HvrRender". Click it to add it to the `Main Camera`.
     9. Position the `Main Camera` in front of the HvrActor.
 
-    The HvrActor should now be visible in the Unity Editor Game View.
+    The HvrActor should now be visible in the Unity Editor Game View. However it might be be darker than the surrounding enviornment because the traditional light doesn't light the actors we just made. In order to light it properly:
 
-    If the HvrActor or HvrRender components do not appear in the Unity Menus, double check the installation instructions or the Troubleshooting section of this documentation. 
+    10. Select the 'Directional Light' object or create it if you don't have one already.
+    11. At the bottom of the inspector click 'Add Component' and search for 'HvrLight'. Click it to add it to the 'Directional Light'.
+
+    If the HvrActor, HvrRender or HvrLight components do not appear in the Unity Menus, double check the installation instructions or the Troubleshooting section of this documentation. 
 
 Build
 -----
