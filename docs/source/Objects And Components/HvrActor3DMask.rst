@@ -11,4 +11,4 @@ This components allows you to mask sections of an HvrActor in 3D space.
   5. The HvrActor will now no longer be visible within the volume of the HrvActor3DMaskObject.
 
 Limitations
-  - This effect is essentially done in 2D. This means masking a hand in front of a face will remove the hand, but the face will. See the example scene for a demonstration of this.
+  - This effect is done in 2D. This means masking a hand in front of a face will remove the hand, but the face will not be visible. See the example scene for a demonstration of this.
