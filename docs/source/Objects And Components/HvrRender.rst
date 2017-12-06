@@ -18,44 +18,17 @@ Rendering Modes
 
 Standard
 ^^^^^^^^
-**Performance**
-
-Bronze
 
 **How it renders**
 
-Renders the scene in multiple passes, where it renders each actor that is visible one by one. This allows for a lot of customization as each HvrActor can have unique shaders and be color-graded individually.
+Renders the scene in multiple passes, where it renders each actor that is visible one by one.
 
-**HvrColorGrading support**
-
-Allows individual color grading of HvrActors if the HvrActor ‘Unity Render Method’ is set to ‘Standard’.
-
-
-Composite
-^^^^^^^^
-**Performance**
-
-Silver
-
-**How it renders**
-
-Renders the scene in a single pass by compositing into the scene by using a fullscreen shader.
-
-**HvrColorGrading support**
-
-Supports color grading if the HvrColorGrading component is attached to same camera as the HvrRender component. Invididual HvrColorGrading components on HvrActors are ignored.
+This allows for a lot of customization as each HvrActor can have unique shaders and be color-graded individually.
 
 
 Direct
 ^^^^^^^^
-**Performance**
-
-Gold
 
 **How it renders**
 
 Rendering the scene in a single pass by rendering directly into the framebuffer.
-
-**HvrColorGrading support**
-
-Does not support color grading.
