@@ -27,20 +27,6 @@ Parameters
                 - Renders faster than PointBlend
 
 **Renderer**
-    **Render Method**
-    The rendering method the actor will use to draw into the scene.
-
-        Options
-            - Standard
-                - Supports per-actor colour grading
-                - Supports custom shaders
-            - Direct
-                - Faster than 'Standard'
-                - Does not support colour grading
-                - Does not support custom shaders
-            
-    .. note::
-        This setting will be overridden if the rendering camera’s HvrRender component is not set to ‘Standard’.
 
     **Material**
         The material the HvrActor will render with if using the 'Standard' RenderMethod.
