@@ -1,12 +1,12 @@
 HvrLight
 ========
 
-HvrLight enables Light component to light HvrActors.
+HvrLight enables HvrActors to be lit by Unity Lights.
 
-There's no options can be adjusted in HvrLight. All the parameters from Light component should reflect on HvrActors once HvrLight is attached, with a few limitations.
+There areno options can be adjusted in HvrLight. All the parameters from the Light component should reflect on HvrActors once HvrLight is attached, with a few limitations.
 
 .. note::
-	HvrLight only works when HvrRender's rendering mode is set to 'Standard'. In 'Direct' rendering mode, the HvrActors will always be fully lit no matter lights or HvrLights are applied or not.
+	HvrLight only works when HvrRender's rendering mode is set to 'Standard'. In 'Direct' rendering mode, HvrActors will not be affected by this component.
 
 How to Create
 -------------

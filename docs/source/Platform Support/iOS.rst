@@ -14,7 +14,7 @@ Performance
 
 Performance Tips
 	- Point Count
-		As Android performs much slower than desktop systems it is recommended that hvr frames with point counts of 600k or less are used, with the recommended point count being around 300k.
+		As mobile platforms perform much slower than desktop systems it is recommended that hvr frames with point counts of 600k or less are used, with the recommended point count being around 300k.
 
 	- Rendering Settings
 		It is recommended to use the ‘Direct’ HvrRender render method on Android as it is the best performing renderer.
