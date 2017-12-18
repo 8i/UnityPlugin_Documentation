@@ -1,0 +1,47 @@
+/* Override the theme css for a more personalized 8i feel */
+.section {
+/*  background: red;
+  color: blue;
+*/
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.document h2,
+.sidebar-block h2 {
+  text-transform: inherit;
+  letter-spacing: normal;
+}
+
+#left-column p,
+#right-column p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+#left-column {
+  bottom: 0;
+  height: initial;
+  top: 100px;
+}
+
+#right-column {
+  max-width: initial;
+  padding: 140px 0 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+}
+
+.footer.portal {
+  /* Override the sphinx theme guzzle. */
+  text-align: left;
+  margin-left: 300px;
+  max-width: 100%;
+  width: initial;
+}

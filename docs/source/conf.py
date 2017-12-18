@@ -19,6 +19,13 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import guzzle_sphinx_theme
+import importlib
+import os
+import recommonmark
+import sys
+from recommonmark.transform import AutoStructify
+
 
 # -- General configuration ------------------------------------------------
 
@@ -31,17 +38,26 @@
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
+    "guzzle_sphinx_theme",
 ]
 
+# Auto create a toctree.
+autodoc_default_flags = ['members']
+autosummary_gerenerate = True
+
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['ntemplates']
+templates_path = ['ntemplates', '../../../eighti/home/templates/', '../../../eighti/portal/templates/']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser'
+}
 # The encoding of source files.
 #
 # source_encoding = 'utf-8-sig'
@@ -122,15 +138,51 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+html_theme = 'guzzle_sphinx_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+# Guzzle theme options (see theme.conf for more information)
+html_theme_options = {
+    # Set the name of the project to appear in the sidebar
+    "project_nav_name": "Unity Plugin Documentation",
+}
+
+# Default to production for now so at least it will always work in production.
+# TODO need to figure out why this isn't picking up the ENVIRONMENT variable?
+settings_module = os.environ.get('DJANGO_SETTINGS_MODULE', "eighti.settings.production")
+env = os.environ.get('ENVIRONMENT')
+if env == 'staging':
+    settings_module = "eighti.settings.staging"
+if env == 'production':
+    settings_module = "eighti.settings.production"
+if env == 'dev':
+    settings_module = "eighti.settings.dev"
+
+sys.path.append(os.path.abspath('../../../eighti'))
+
+config = importlib.import_module(settings_module)
+
+html_context = {
+    "config": {
+        'DEV_PORTAL_URL': '/developers/',
+        'EIGHTI_URL': '/',
+    },
+    # We need this to appear similar to a wagtail context.
+    'page': {
+        'platform': {
+            'nav_item_name': 'Unity',
+            'documentation_link': '?',
+        }
+    }
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
@@ -144,7 +196,7 @@ todo_include_todos = False
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-# html_logo = None
+html_logo = 'nstatic/unity.png'
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -155,7 +207,9 @@ todo_include_todos = False
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['nstatic']
+html_static_path = [
+    'nstatic'
+]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -177,6 +231,14 @@ html_static_path = ['nstatic']
 # Custom sidebar templates, maps document names to template names.
 #
 # html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'logo-text.html',
+        'globaltoc.html',
+        'relations.html',
+        'searchbox.html'
+    ],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -197,11 +259,11 @@ html_static_path = ['nstatic']
 
 # If true, links to the reST sources are added to the pages.
 #
-# html_show_sourcelink = True
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #
-# html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #
@@ -338,3 +400,20 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+# AutoStructify features.
+# Provided by recommonmark http://recommonmark.readthedocs.io/en/latest/index.html
+# See the potential at http://recommonmark.readthedocs.io/en/latest/auto_structify.html
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'url_resolver': lambda url: 'https://github.com/8i/UnityPlugin_Documentation/' + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_auto_toc_tree': True,
+        'enable_auto_doc_ref': True,
+    }, True)
+    app.add_transform(AutoStructify)
+
+    app.add_stylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    app.add_stylesheet('https://fonts.googleapis.com/css?family=Roboto:100,300,400')
+    app.add_stylesheet('/static/css/8icommon.css')
+    app.add_stylesheet('/static/css/8idocumentation.css')
