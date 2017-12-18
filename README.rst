@@ -13,7 +13,7 @@ See the https://github.com/8i/8i-com/ repo for more about that.
 
 To test this flow, you will need pip(https://github.com/pypa/pip) to install the build dependencies.
 
-pip install -r requirements
+pip install -r requirements.txt
 
 Once you have these installed you can build the docs using sphinx.
 
@@ -35,5 +35,21 @@ See .buildkite/build.sh in the 8i-com repo to see how all of the repos are check
 
 There is most definitely a more efficient/better way to do this, but deadlines won ¯\_(ツ)_/¯.
 
-TODO should be able to docker-compose the latest docker image from quay?
-And then update the documentation repos as required???
+Possible alternative way to run the latest staging docker image.
+Pull the image down from Quay.
+See the docker-compose.yml in the root of 8i-com and use the image: line to
+pull the latest tag down from quay instead of having to build it fresh.
+You will need to comment out the build: section.
+
+Once you have the local docker image running successfully.
+
+You can view logs with
+docker-compose logs -f app
+
+And connect with a bash shell with
+docker-compose exec app /bin/bash
+
+cd /app/UnityPlugin_Documentation/docs
+
+Then you can rebuild
+sphinx-build -b html -a source/ build/
