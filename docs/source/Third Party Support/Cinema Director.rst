@@ -7,6 +7,11 @@ Within the ‘8i Unity Plugin’ download folder there is a zip folder under ‘
 
 For an introduction to Cinema Director, tutorial videos can be found here.
 
+**Download**
+
+8iUnityPlugin 0.4.2f1
+* CinemaDirector 1.4.5.2 `Download <https://drive.google.com/open?id=0B2RPRDuZy4rIejdFRURrRDhETm8>`_
+
 **Installation**
 
 Extract the ‘CinemaDirector’ folder from the zip into your project located under '8i/Integrations'
