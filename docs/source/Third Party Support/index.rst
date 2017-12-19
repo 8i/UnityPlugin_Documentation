@@ -8,3 +8,4 @@ Contents:
 
    Cinema Director
    Node Canvas
+   Cinematic Sequencer
