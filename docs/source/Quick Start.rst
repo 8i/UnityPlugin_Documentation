@@ -1,8 +1,8 @@
 Quick Start
 ===========
 
-Create
-------
+Create a Scene
+--------------
 
     If you are brand new to Unity then there are some excellent tutorials for learning the interface and it’s features here 
     https://unity3d.com/learn/tutorials
@@ -21,8 +21,8 @@ Create
 
     If the HvrActor or HvrRender components do not appear in the Unity Menus, double check the installation instructions or the Troubleshooting section of this documentation. 
 
-Build
------
+Create a Build
+--------------
     1. Follow the 'Creating a scene' steps above.
     2. Save the scene.
     3. Open Build Settings window under 'File/Build Settings...'.
@@ -32,8 +32,8 @@ Build
     Unity will now compile the project and create an exe. If it does not, check the Troubleshooting section of this documentation. 
 
 
-VR
---
+Using VR
+--------
     The 8i Unity Plugin fully supports VR rendering.
 
     To enable VR for your Unity Project

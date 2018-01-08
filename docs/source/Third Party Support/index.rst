@@ -1,8 +1,6 @@
 Third Party Support
 ===================
 
-Contents:
-
 .. toctree::
    :maxdepth: 0
 

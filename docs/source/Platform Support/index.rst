@@ -1,9 +1,7 @@
 Platform Support
 ================
 
-Contents:
-
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
 
    Android

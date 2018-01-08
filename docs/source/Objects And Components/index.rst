@@ -4,7 +4,7 @@ Objects and Components
 Contents:
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
 
    HvrActor
    HvrActorClone
